@@ -11,6 +11,7 @@ from scraper_base.data_models import (JobResult, JobStatus, RequestType,
 from scraper_base.page_type_base import PageTypeBase
 from scraper_base.result_processor_base import ResultProcessorBase
 
+logging.basicConfig(level=logging.DEBUG, filename='scraper.log')
 logger = logging.getLogger(__name__)
 
 
@@ -41,6 +42,8 @@ class ScraperService:
                     job_result = self.execute_job(current_page_type)
                     self.process_job_result(job_result, current_page_type)
             else:
+                if self.result_processor:
+                    self.result_processor.save_results()
                 # there is no job in the queue, we may assume the scraping is done.
                 self.stop_process()
 

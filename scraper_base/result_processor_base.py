@@ -13,3 +13,8 @@ class ResultProcessorBase(abc.ABC):
     def process_result(obj: JobResult) -> None:
         """Given any object which is a dataclass, process it."""
         pass
+
+    @staticmethod
+    def save_results() -> None:
+        """Given the processed data, save it."""
+        pass

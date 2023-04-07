@@ -1,4 +1,3 @@
-"""Create here all your concrete Page Type Classes."""
 from typing import List, Optional
 from scraper_base.data_models import JobResult, ScraperJob, JobStatus, RequestType
 from scraper_base.page_type_base import PageTypeBase

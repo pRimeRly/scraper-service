@@ -1,3 +1,4 @@
+"""Base class used to define web page type classes to be scraped"""
 from abc import ABC, abstractmethod
 
 from scraper_base.data_models import JobResult, ScraperJob
