@@ -3,7 +3,7 @@
 ### Web scraper built to retrieve product data from a shop website.
 
 ## Project Description
-A web scraper that allows you to scrape a website url, built using Python 3 and depends on the requests and BeautifulSoup to extract information from HTML pages.
+A web scraper that allows you to scrape a website url, built using Python 3 and depends on the requests and BeautifulSoup libraries to extract information from HTML pages.
 
 The scraper will start with the initial URL and crawl through the website, discovering new pages to scrape along the way. The scraper has Page type classes which instruct the scraper on how to get new scraper jobs, determines when to process results and also assigns priority for certain page types. The results are then processed by the ResultProcessor class defined in the  'webshop_scraper.result_processors' module.
 
